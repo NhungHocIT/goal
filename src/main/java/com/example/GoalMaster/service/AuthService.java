@@ -92,21 +92,16 @@ public UserResponseLoginDTO loginUser(UserRequestLoginDTO userDto) throws AppExc
 
     Profile profile = profileRepository.findByUser(user).orElse(null);
 
-    ProfileResponseDTO profileResponse = null;
-    if (profile != null) {
-        profileResponse = ProfileResponseDTO.builder()
-                .id(profile.getIdUser())
-                .username(profile.getUsername())
-                .birth(profile.getBirth())
-                .build();
-    }
-
-
+    ProfileResponseDTO profileResponse = ProfileResponseDTO.builder()
+            .id(profile.getIdUser())
+            .username(profile.getUsername())
+            .birth(profile.getBirth())
+            .build();
     return UserResponseLoginDTO.builder()
             .id(user.getId())
             .emailPhone(user.getEmailPhone())
             .profile(profileResponse)
             .build();
-}
+    }
 
 }
