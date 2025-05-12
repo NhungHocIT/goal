@@ -19,5 +19,6 @@ public class ProfileResponseDTO {
     String background_image;
     String bio;
     Date birth;
+    String username;
 }
 

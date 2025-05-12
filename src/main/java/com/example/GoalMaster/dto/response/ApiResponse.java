@@ -17,10 +17,6 @@ public class ApiResponse<T> {
     String message;
     int statusCode;
     boolean status;
-    int page;
-    int size;
-    int totalPages;
-    int totalElements;
     T data;
     Object errors;
 }

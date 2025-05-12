@@ -14,9 +14,9 @@ import lombok.experimental.FieldDefaults;
 
 public class ProfileRequestDto {
     String username;
-    String email_phone;
-    String password;
-    String confirmPassword;
+    String avatar_url;
+    String background_image;
+    String bio;
     @JsonFormat(pattern = "yyyy-MM-dd")
     String birth;
 }

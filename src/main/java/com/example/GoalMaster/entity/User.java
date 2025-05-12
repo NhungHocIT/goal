@@ -20,8 +20,8 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUser")
-    Long idUser;
+    @Column(name = "idUser", nullable = false)
+    Long id;
 
     @Column(nullable = false, unique = true)
     String emailPhone;
@@ -30,8 +30,4 @@ public class User {
 
     @CreatedDate
     Date createdAt;
-
-    @OneToOne
-    @JoinColumn(name = "usersId", referencedColumnName = "idUser")
-    Profile profile;
 }

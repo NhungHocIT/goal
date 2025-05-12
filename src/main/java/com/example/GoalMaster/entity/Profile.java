@@ -29,6 +29,9 @@ public class Profile {
 
     @Column(name = "username", nullable = false)
     String username;
-    @Column(name = "birth", nullable = false)
+    @Column(name = "birth", nullable = true)
     Date birth;
+    @OneToOne
+    @JoinColumn(name = "usersId", referencedColumnName = "idUser")
+    User user;
 }
